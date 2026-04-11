@@ -15,6 +15,21 @@ const database = {
     { id: 5, serviceId: [], name: "Campgrounds", location: "southern" },
     { id: 6, serviceId: [], name: "Pine Bluff Trails", location: "southeast" },
   ],
+  services: [
+    {id: 1, name: "rafting"},
+    {id: 2, name: "canoeing"},
+    {id: 3, name: "fishing"},
+    {id: 4, name: "hiking"},
+    {id: 5, name: "picnicking"},
+    {id: 6, name: "rock climbing"},
+    {id: 7, name: "lodging"},
+    {id: 8, name: "parking"},
+    {id: 9, name: "information"},
+    {id: 10, name: "zip lines"},
+  ]
 };
 
 //functions to getAreas, getServices, getGuests - return structured clone
+export const getServices = () => {
+    return structuredClone(database.services);
+}
