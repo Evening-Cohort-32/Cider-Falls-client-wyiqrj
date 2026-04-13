@@ -8,11 +8,17 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         const clickTarget = clickEvent.target
-        const servicesId = clickTarget.dataset.id
+        const serviceId = clickTarget.dataset.id
 
-        for (const service of services) {
-            if (service.id === parseInt(serviceId)) {
-                window.alert(`${servicesId} is provided in the folllowing parks: ${location.name}`)
+        if (serviceId) {
+            //Find parks that provide the clicked service
+            const matchingLocations = locations.filter(location =>
+                location.serviceId.includes(parseInt(serviceId))
+            )
+            //Generate a message with the names of the matching locations
+        if (matchingLocations.length > 0) {
+            const locationNames = matchingLocations.map(location => location.name).join(", ");
+                window.alert(`${clickTarget.innerText} is provided in the following parks: ${locationNames}`)
             }
         }
     }
