@@ -8,12 +8,12 @@ const database = {
     { id: 6, parkId: 4, name: "David Wilson" },
   ],
   locations: [
-    { id: 1, serviceId: [], name: "Chamfort River", location: "northeast" },
-    { id: 2, serviceId: [], name: "Lost Wolf Hiking Trail", location: "north" },
-    { id: 3, serviceId: [], name: "Lodge", location: "northwest" },
-    { id: 4, serviceId: [], name: "Gander River", location: "southwest" },
-    { id: 5, serviceId: [], name: "Campgrounds", location: "southern" },
-    { id: 6, serviceId: [], name: "Pine Bluff Trails", location: "southeast" },
+    { id: 1, serviceId: [1, 2, 3], name: "Chamfort River", location: "northeast" },
+    { id: 2, serviceId: [4, 5, 6], name: "Lost Wolf Hiking Trail", location: "north" },
+    { id: 3, serviceId: [5, 7, 8, 9], name: "Lodge", location: "northwest" },
+    { id: 4, serviceId: [3, 4], name: "Gander River", location: "southwest" },
+    { id: 5, serviceId: [7, 8, 9], name: "Campgrounds", location: "southern" },
+    { id: 6, serviceId: [4, 5, 10], name: "Pine Bluff Trails", location: "southeast" },
   ],
   services: [
     { id: 1, name: "rafting" },
