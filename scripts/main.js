@@ -9,6 +9,10 @@ const mainContainer = document.querySelector("#container")
 const applicationHTML = `
 <h1>Cider Falls</h1>
 <article class="services">
+<<<<<<< HEAD
+=======
+    <h2>Park Services:</h2>
+>>>>>>> main
     ${listedServices()}
 </article>
 <article class="details">
