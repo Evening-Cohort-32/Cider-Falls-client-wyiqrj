@@ -10,3 +10,11 @@
     padding: 1em;
     max-width: 20;
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: auto; /* Helps with layout if using flexbox */
+}
