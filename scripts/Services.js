@@ -9,6 +9,7 @@ document.addEventListener(
     (clickEvent) => {
         const clickTarget = clickEvent.target
         const serviceId = clickTarget.dataset.id
+        const serviceName = clickTarget.dataset.name
 
         if (serviceId) {
             //Find parks that provide the clicked service
@@ -18,7 +19,7 @@ document.addEventListener(
             //Generate a message with the names of the matching locations
         if (matchingLocations.length > 0) {
             const locationNames = matchingLocations.map(location => location.name).join(", ");
-                window.alert(`${clickTarget.innerText} is provided in the following parks: ${locationNames}`)
+                window.alert(`${serviceName} is provided in the following parks: ${locationNames}`)
             }
         }
     }
