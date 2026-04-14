@@ -25,7 +25,7 @@ document.addEventListener("click", (clickEvent) => {
   let guestNumber = 0;
   if (clickTarget.dataset.type === "location") {
     for (const guest of guests) {
-      if (clickTarget.dataset.location_id === guest.parkId) {
+      if (parseInt(clickTarget.dataset.location_id) === guest.parkId) {
         guestNumber++;
       }
     }

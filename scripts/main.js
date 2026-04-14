@@ -1,10 +1,11 @@
 import { renderLocations } from "./parkAreas.js";
 import { listedServices } from "./Services.js";
+import { guestList } from "./Guests.js";
 /*import functions from parkAreas, Guests, and Services to populate webpage
 
 
 get container element by id & */
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `
 <h1>Cider Falls</h1>
@@ -17,9 +18,13 @@ const applicationHTML = `
         ${renderLocations()}
     </section>
 </article>
-`
+<article class="guests">
+    <h3>Current Guests</h3>
+    ${guestList}
+</article>
+`;
 
-mainContainer.innerHTML = applicationHTML
+mainContainer.innerHTML = applicationHTML;
 
 //const container = document.getElementById("container");
 //const areas = renderLocations();
