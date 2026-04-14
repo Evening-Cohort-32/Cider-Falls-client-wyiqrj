@@ -1,6 +1,12 @@
+#locations {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .locationCard {
     border: 1px solid black;
     border-radius: 5px;
-    margin: 1rem;
+    margin: 1em;
     padding: 1em;
+    max-width: 20;
 }

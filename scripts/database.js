@@ -42,6 +42,116 @@ const database = {
     { id: 9, name: "information" },
     { id: 10, name: "zip lines" },
   ],
+  locationServices: [
+    {
+      locationId: 1,
+      locationName: "Chamfort River",
+      serviceId: 1,
+      serviceName: "rafting",
+    },
+    {
+      locationId: 1,
+      locationName: "Chamfort River",
+      serviceId: 2,
+      serviceName: "canoeing",
+    },
+    {
+      locationId: 1,
+      locationName: "Chamfort River",
+      serviceId: 3,
+      serviceName: "fishing",
+    },
+    {
+      locationId: 2,
+      locationName: "Lost Wolf Hiking Trail",
+      serviceId: 4,
+      serviceName: "hiking",
+    },
+    {
+      locationId: 2,
+      locationName: "Lost Wolf Hiking Trail",
+      serviceId: 5,
+      serviceName: "picnicking",
+    },
+    {
+      locationId: 2,
+      locationName: "Lost Wolf Hiking Trail",
+      serviceId: 6,
+      serviceName: "rock climbing",
+    },
+    {
+      locationId: 3,
+      locationName: "Lodge",
+      serviceId: 5,
+      serviceName: "picnicking",
+    },
+    {
+      locationId: 3,
+      locationName: "Lodge",
+      serviceId: 7,
+      serviceName: "lodging",
+    },
+    {
+      locationId: 3,
+      locationName: "Lodge",
+      serviceId: 8,
+      serviceName: "parking",
+    },
+    {
+      locationId: 3,
+      locationName: "Lodge",
+      serviceId: 9,
+      serviceName: "information",
+    },
+    {
+      locationId: 4,
+      locationName: "Gander River",
+      serviceId: 3,
+      serviceName: "fishing",
+    },
+    {
+      locationId: 4,
+      locationName: "Gander River",
+      serviceId: 4,
+      serviceName: "hiking",
+    },
+    {
+      locationId: 5,
+      locationName: "Campgrounds",
+      serviceId: 7,
+      serviceName: "lodging",
+    },
+    {
+      locationId: 5,
+      locationName: "Campgrounds",
+      serviceId: 8,
+      serviceName: "parking",
+    },
+    {
+      locationId: 5,
+      locationName: "Campgrounds",
+      serviceId: 9,
+      serviceName: "information",
+    },
+    {
+      locationId: 6,
+      locationName: "Pine Bluff Trails",
+      serviceId: 4,
+      serviceName: "hiking",
+    },
+    {
+      locationId: 6,
+      locationName: "Pine Bluff Trails",
+      serviceId: 5,
+      serviceName: "picnicking",
+    },
+    {
+      locationId: 6,
+      locationName: "Pine Bluff Trails",
+      serviceId: 10,
+      serviceName: "zip lines",
+    },
+  ],
 };
 
 //functions to getAreas, getServices, getGuests - return structured clone
@@ -53,4 +163,7 @@ export const getLocations = () => {
 };
 export const getServices = () => {
   return structuredClone(database.services);
+};
+export const getLocationServices = () => {
+  return structuredClone(database.locationServices);
 };

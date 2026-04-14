@@ -1,28 +1,22 @@
 import { getLocations } from "./database.js";
-import { getServices } from "./database.js";
-//import getAreas function from database
+import { getLocationServices } from "./database.js";
 
-//function that creates areasHTML that we can display on webpage
 export const renderLocations = () => {
-  let locationsHTML = "";
+  let locationsHTML = `<h2>Areas</h2><section id="locations">`;
   let servicesString = "";
   let locations = getLocations();
-  let services = getServices();
+  let locationServices = getLocationServices();
 
   for (const location of locations) {
     servicesString = "";
-    for (const currentServiceId of location.serviceId) {
-      for (const service of services) {
-        if (currentServiceId === service.id) {
-          servicesString += `${service.name}, `;
-        }
+    for (const locationService of locationServices) {
+      if (location.id === locationService.locationId) {
+        servicesString += `${locationService.serviceName}, `;
       }
     }
     locationsHTML += `<div class="locationCard"><h3 class="areaName">${location.name}</h3><p class="servicesText">Services: ${servicesString}</p></div>`;
   }
+  locationsHTML += `</section>`;
   return locationsHTML;
-
-  // services a location provides is found in locations.serviceId array.
-  //for item of serviceId array, if item === services.id, servicesString += `services[${services.id}-1].name`
 };
 //event listener/function that says displays how many guests are in area when area is clicked
