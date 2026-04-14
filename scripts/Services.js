@@ -26,13 +26,13 @@ document.addEventListener(
 
 //function to create servicesHTML to display on webpage
 export const listedServices = () => {
-    let servicesHTML = "<ul>"
+    let servicesHTML = "Park services: "
+    
+    const serviceLinks = services.map(service => 
+        `<span data-id="${service.id}" data-name="${service.name}">${service.name}</span>`
+    )
+    
+    servicesHTML += serviceLinks.join(", ")
 
-    for (const service of services) {
-        servicesHTML += `<li data-id="${services.id}" data-name="${services.name}">${service.name}</li>`
-    }
-
-    servicesHTML += "</ul>"
-
-    return servicesHTML
+    return `<p>${servicesHTML}</p>`
 }
