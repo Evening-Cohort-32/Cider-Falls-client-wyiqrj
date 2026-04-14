@@ -19,5 +19,11 @@ export const renderLocations = () => {
   locationsHTML += `</section>`;
   return locationsHTML;
 };
+
+document.addEventListener("click", (clickEvent) => {
+  const clickTarget = clickEvent.target
+  if (clickTarget.dataset.type === "location")
+    
+})
 //event listener/function that says displays how many guests are in area when area is clicked
 
