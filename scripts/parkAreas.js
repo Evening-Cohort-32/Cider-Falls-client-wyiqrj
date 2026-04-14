@@ -10,7 +10,15 @@ export const renderLocations = () => {
   let services = getServices();
 
   for (const location of locations) {
-    locationsHTML += `<div class="locationCard"><h3>${location.name}</h3><p>Services: ${servicesString}</p></div>`;
+    servicesString = "";
+    for (const currentServiceId of location.serviceId) {
+      for (const service of services) {
+        if (currentServiceId === service.id) {
+          servicesString += `${service.name}, `;
+        }
+      }
+    }
+    locationsHTML += `<div class="locationCard"><h3 class="areaName">${location.name}</h3><p class="servicesText">Services: ${servicesString}</p></div>`;
   }
   return locationsHTML;
 
