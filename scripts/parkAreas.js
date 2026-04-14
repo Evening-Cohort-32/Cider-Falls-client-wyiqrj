@@ -14,7 +14,7 @@ export const renderLocations = () => {
         servicesString += `${locationService.serviceName}, `;
       }
     }
-    locationsHTML += `<div class="locationCard"><h3 class="areaName">${location.name}</h3><p class="servicesText">Services: ${servicesString}</p></div>`;
+    locationsHTML += `<div class="locationCard"><h3 class="areaName" data-type="location" data-location_id="${location.id}">${location.name}</h3><p class="servicesText">Services: ${servicesString}</p></div>`;
   }
   locationsHTML += `</section>`;
   return locationsHTML;
