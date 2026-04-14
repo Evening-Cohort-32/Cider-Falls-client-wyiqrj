@@ -18,3 +18,14 @@ footer {
   color: white;
   margin-top: auto; /* Helps with layout if using flexbox */
 }
+
+.header {
+  display: flex;         /* Enables Flexbox */
+  align-items: center;   /* Vertically centers the logo and text */
+  gap: 20px;             /* Adds space between the logo and text */
+}
+
+.logo {
+  height: 50px;          /* Set your desired logo height */
+  width: auto;           /* Maintains aspect ratio */
+}

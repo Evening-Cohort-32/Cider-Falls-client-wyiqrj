@@ -7,12 +7,11 @@ get container element by id & */
 const mainContainer = document.querySelector("#container")
 
 const applicationHTML = `
-<h1>Cider Falls</h1>
+<header class="header">
+    <h1>Cider Falls</h1>
+    <img src="https://logo-icons.com/cdn/shop/files/365-logo-1712247272.204color-8A9A5B.svg?v=1712759864&width=416" alt="Company logo" class="logo"></img>
+</header>
 <article class="services">
-<<<<<<< HEAD
-=======
-    <h2>Park Services:</h2>
->>>>>>> main
     ${listedServices()}
 </article>
 <article class="details">
