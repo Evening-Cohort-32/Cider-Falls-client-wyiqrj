@@ -1,7 +1,7 @@
 import { getLocations, getLocationServices, getGuests } from "./database.js";
 
 export const renderLocations = () => {
-  let locationsHTML = `<h2>Areas</h2><section id="locations">`;
+  let locationsHTML = `<section id="locations">`;
   let servicesString = "";
   const locations = getLocations();
   const locationServices = getLocationServices();

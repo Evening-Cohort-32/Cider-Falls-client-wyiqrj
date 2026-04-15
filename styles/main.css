@@ -2,10 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 70%;
-    margin-left: 1em;
+    margin-left: 3em;
+    margin-bottom: 5em;
 }
-#servicesAndGuests {
-    
+
+#locationsAndGuests {
+    display: flex;
+}
+
+.details {
+    max-width: 70%;
+}
+
+.guests {
+    margin: 1rem;
 }
 
 .locationCard {
