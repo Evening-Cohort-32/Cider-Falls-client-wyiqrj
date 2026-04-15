@@ -16,15 +16,16 @@ const applicationHTML = `
 <article class="services">
     ${listedServices()}
 </article>
-<article class="details">
-    <section class="detail--column list details__areas">
-        ${renderLocations()}
-    </section>
-</article>
-<article class="guests">
-    <h3>Current Guests</h3>
-    ${guestList()}
-</article>
+
+<h2>Areas</h2>
+<section id="locationsAndGuests">  
+    ${renderLocations()}
+
+    <article class="guests">
+        <h2>Current Guests</h2>
+        ${guestList()}
+    </article>
+</section>
 `;
 
 mainContainer.innerHTML = applicationHTML;
