@@ -1,21 +1,19 @@
 //import getGuests from database
 
-import { getGuests } from "./database.js"
+import { getGuests } from "./database.js";
 
 //function that creates guestHTML that we can display on webpage
 
 export const guestList = () => {
-    const guests = getGuests()
+  const guests = getGuests();
 
-    let guestHTML = "<ul>"
+  let guestHTML = "<ul>";
 
-    for (const guest of guests) {
-        guestHTML += `<li>${guest.name}</li>`
-    }
+  for (const guest of guests) {
+    guestHTML += `<li>${guest.name}</li>`;
+  }
 
-    guestHTML += "</ul>"
+  guestHTML += "</ul>";
 
-    return guestHTML
-
-}
-
+  return guestHTML;
+};
